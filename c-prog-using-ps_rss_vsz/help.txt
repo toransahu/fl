@@ -1,0 +1,13 @@
+/proc/
+ls
+#will show pid
+
+/proc/pid/status #will show status of pid
+
+ps -p <pid> -o rss #will show Resident Set Size (rss)
+
+ps -p <pid> -o vsz #will show Virtual Memory Size (vsz)
+
+
+char *const parmList[] = {"ps","-p",pid,"-o","rss",NULL};
+execvp("/bin/ps", parmList);
